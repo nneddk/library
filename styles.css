@@ -47,7 +47,10 @@ body, html{
     height: 80%;
 }
 #show-form{
-    position:absolute
+    position:absolute;
+    border:none;
+    background-color: transparent;
+    color: white;
 }
 .bs-frame{
     position:static;
@@ -148,6 +151,9 @@ body, html{
     display: flex;
     justify-content: center;
     align-items: center;
+    border:none;
+    background-color: transparent
+    color: black
 }
 
 #dlt-book-btn{
