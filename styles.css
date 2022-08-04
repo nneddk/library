@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
 *{
     font-family: 'Roboto Condensed', sans-serif;
-    border:solid;
 }
 body, html{
     height: 100%;
@@ -28,14 +27,27 @@ body, html{
     height: 88%;
     display: flex;
     align-items: center;
-    background-color: yellow;
+    background-image: linear-gradient(to bottom right, purple, yellow);
 }
 #wrapper{
     height: 88%;
     width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
     background-color: rgb(0, 0, 0, 0.5);
     position: absolute;
     z-index: -1;
+}
+.book-info-wrap{
+    height: 60vmin;
+    width: 40vmin;
+}
+.book-info{
+    height: 80%;
+}
+#show-form{
+    position:absolute
 }
 .bs-frame{
     position:static;

@@ -10,10 +10,13 @@
 </head>
 <body>
     <div class = 'header'>[n3] library</div>
-    <div id = 'wrapper'></div>
+    <div id = 'wrapper'>
+        </div>
+    </div>
     <div id = 'main-page'>
         <div id = 'book-form'>
-
+            <button type = 'button' class = 'formb' id = 'close-form' >x</button>
+            <br>
             <span id = 'color-span'>
                 <input type ='color' id = 'book-color' name = 'book-color' value = '#281010'>
             </span>
@@ -27,13 +30,14 @@
             </select>
                 <div class = 'book-form-buttons'>
                     <button type = 'button' class = 'formb' id = 'add-book-btn' >+</button>
-                    <button type = 'button' class = 'formb' id = 'close-form' >x</button>
+
+                    <button type = 'button' class = 'formb' id = 'dlt-book-btn'>Delete</button>
+                    <button type = 'button' class = 'formb' id = 'edit-book-btn'>Confirm</button>
                 </div>
         </div>
         
         <button type = 'button' id = show-form>+</button>
-        <button type = 'button' class = 'formb' id = 'dlt-book-btn' disabled>Delete</button>
-        <button type = 'button' class = 'formb' id = 'edit-book-btn' disabled>Edit</button>
+        
     <div class = 'bs-frame'>
             <div id = 'bookshelf'></div>
     </div>
