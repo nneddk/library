@@ -150,3 +150,10 @@ body, html{
     justify-content: center;
     align-items: center;
 }
+
+#dlt-book-btn{
+    display:none;
+}
+#edit-book-btn{
+    display:none;
+}

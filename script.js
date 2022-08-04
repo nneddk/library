@@ -23,10 +23,26 @@ const bookMaker = (()=>{
     const closeFormBtn = document.getElementById('close-form');
     const wrapper = document.getElementById('wrapper');
     openFormBtn.onclick = function(){
+        clear();
         openForm();
     }
     closeFormBtn.onclick = function(){
+        clear();
         openForm();
+    }
+    
+    const clear = () => {
+        document.getElementById('title').value = '';
+        document.getElementById('author').value = '';
+        document.getElementById('release-year').value = '';
+        document.getElementById('read').value = 0;
+        document.getElementById('book-color').value = '#281010';
+        editIndex = null;
+        document.getElementById('add-book-btn').removeAttribute('disabled');
+        document.getElementById('dlt-book-btn').setAttribute('disabled', true);
+        document.getElementById('dlt-book-btn').style.display = 'none';
+        document.getElementById('edit-book-btn').setAttribute('disabled', true);
+        document.getElementById('edit-book-btn').style.display = 'none';
     }
     const openForm = () =>{
         let addForm = document.getElementById('book-form');
@@ -40,18 +56,6 @@ const bookMaker = (()=>{
             opened = 0;
         }
     }
-    const clear = () => {
-        document.getElementById('title').value = '';
-        document.getElementById('author').value = '';
-        document.getElementById('release-year').value = '';
-        document.getElementById('read').value = 0;
-        document.getElementById('book-color').value = '#281010';
-        editIndex = null;
-        document.getElementById('add-book-btn').removeAttribute('disabled');
-        document.getElementById('dlt-book-btn').setAttribute('disabled', true);
-        document.getElementById('edit-book-btn').setAttribute('disabled', true);
-        openForm();
-    }
     //adds book
     const addBook = () =>{
         if (myBooks.length < 32){
@@ -63,6 +67,7 @@ const bookMaker = (()=>{
             const bookColor = document.getElementById('book-color').value;
             myBooks.push(new Book(bookTitle, bookAuthor, bookDate, bookRead, bookColor));
             addBookToShelf(currIndex); 
+            openForm();
             clear();
             }
     }
@@ -78,6 +83,7 @@ const bookMaker = (()=>{
             editTitle[editIndex].textContent = myBooks[editIndex].title;
             let editColor = document.querySelectorAll('.color-mark');
             editColor[editIndex].style.backgroundColor = document.getElementById('book-color').value;
+            openForm();
             clear();
             }
     }
@@ -93,6 +99,7 @@ const bookMaker = (()=>{
         addBookToShelf(v);
         v++;
         });
+        openForm();
         clear();  
         }
     }
@@ -116,7 +123,9 @@ const bookMaker = (()=>{
             openForm();
             document.getElementById('add-book-btn').setAttribute('disabled', true);
             document.getElementById('dlt-book-btn').removeAttribute('disabled');
+            document.getElementById('dlt-book-btn').style.display = 'inline';
             document.getElementById('edit-book-btn').removeAttribute('disabled');
+            document.getElementById('edit-book-btn').style.display = 'inline';
         }
         let colorMark = document.createElement('div');
         colorMark.classList.add('color-mark');
