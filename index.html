@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src = './script.js' defer></script>
+    <link rel = 'stylesheet' href = './styles.css'>
+    <title>Library</title>
+</head>
+<body>
+    <div class = 'header'>[n3] library</div>
+    <div id = 'wrapper'></div>
+    <div id = 'main-page'>
+        <div id = 'book-form'>
+
+            <span id = 'color-span'>
+                <input type ='color' id = 'book-color' name = 'book-color' value = '#281010'>
+            </span>
+            <input type = 'text' id='title' class = 'form btitle' name = 'title' maxlength='30' placeholder='Title...'>
+            <input type = 'text' id='author'class = 'form author'  name = 'author' placeholder='author'>
+            <input type ='text' id='release-year'class = 'form year'  name = 'release-year' placeholder='year'>
+            <select id = 'read' name = 'read' class = 'form sel' >
+                <option value = '0'>Not Read</option>
+                <option value = '1'>Read</option>
+                <option value = '2'>Currently Reading</option>
+            </select>
+                <div class = 'book-form-buttons'>
+                    <button type = 'button' class = 'formb' id = 'add-book-btn' >+</button>
+                    <button type = 'button' class = 'formb' id = 'close-form' >x</button>
+                </div>
+        </div>
+        
+        <button type = 'button' id = show-form>+</button>
+        <button type = 'button' class = 'formb' id = 'dlt-book-btn' disabled>Delete</button>
+        <button type = 'button' class = 'formb' id = 'edit-book-btn' disabled>Edit</button>
+    <div class = 'bs-frame'>
+            <div id = 'bookshelf'></div>
+    </div>
+
+
+</div>
+    
+<div class = 'footer'>@nneddk</div>
+</body>
+</html>

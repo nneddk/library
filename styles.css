@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+*{
+    font-family: 'Roboto Condensed', sans-serif;
+    border:solid;
+}
+body, html{
+    height: 100%;
+    margin: 0;
+    font-size: 15px;
+}
+
+
+.header{
+    height: 8%;
+    font-size: 35px;
+}
+.footer{
+    height: 4%;
+}
+.header, .footer{
+    display:flex;
+    align-items: center;
+    padding-left: 20px;
+    color:white;
+    background-color: black;
+}
+#main-page{
+    height: 88%;
+    display: flex;
+    align-items: center;
+    background-color: yellow;
+}
+#wrapper{
+    height: 88%;
+    width:100%;
+    background-color: rgb(0, 0, 0, 0.5);
+    position: absolute;
+    z-index: -1;
+}
+.bs-frame{
+    position:static;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    transition: all 0.5s;
+}
+
+#bookshelf{
+    padding: 24px;
+    background-color: #243f3f;
+    height: 80vmin;
+    width: 50vmin;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    row-gap: 18px;
+}
+.book-holder{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-end;
+}
+
+.book-holder:hover .book{
+    transform: scale(1.1);
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    box-shadow: -5px 5px black;
+    z-index: 1;
+}
+.book{
+    width: 100%;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 8fr;
+    transition: all 0.3s;
+}
+
+.title-holder{
+    background-color: white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+}
+.title{
+    color:darkslategray;
+    font-size: 2vmin;
+    position: absolute;
+    transform: rotate(90deg);
+    width: 15vmin;
+    max-width: 15vmin;
+    text-align: center;
+    transition: all 0.3s;
+    overflow-wrap: break-word;
+    overflow:hidden;
+}
+#book-form{
+    position:absolute;
+    height: 88%;
+    transition: all 0.5s;
+    background-color: white;
+    box-shadow: -5px 5px black;
+    z-index: 2;
+    font-size: 2vmin;
+    overflow: hidden;
+    width: 0;
+    transition:all 0.5s;
+    z-index: 2;
+
+}
+.btitle{
+    font-size: 2vmin;
+    height: 5vmin;
+    text-overflow: ellipsis;
+}
+.author, .year{
+    font-size: 1.5vmin;
+    height: 4vmin;
+    text-overflow: ellipsis;
+}
+.form{
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    outline: none;
+}
+#book-color{
+    width: 100%;
+    height: 5vmin;
+    border:none;
+}
+.book-form-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
